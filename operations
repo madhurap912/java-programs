@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class ArithmeticOperators {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        int sum = a + b;
+        System.out.println("Addition: " + sum);
+
+        int diff = a - b;
+        System.out.println("Subtraction: " + diff);
+
+        int mul = a * b;
+        System.out.println("Multiplication: " + mul);
+
+        if (b != 0) {
+            int div = a / b;
+            System.out.println("Division: " + div);
+        } else {
+            System.out.println("Division by zero is not allowed.");
+        }
+    }
+}
