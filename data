@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class BankAccount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Different data types
+        int accountNumber;
+        String accountHolder;
+        double balance;
+        char accountType;      // 'S' for Savings, 'C' for Current
+        boolean isActive;
+
+        // Input
+        System.out.print("Enter Account Number: ");
+        accountNumber = sc.nextInt();
+        sc.nextLine(); // to consume newline
+
+        System.out.print("Enter Account Holder Name: ");
+        accountHolder = sc.nextLine();
+
+        System.out.print("Enter Initial Balance: ");
+        balance = sc.nextDouble();
+
+        System.out.print("Enter Account Type (S/C): ");
+        accountType = sc.next().charAt(0);
+
+        System.out.print("Is Account Active? (true/false): ");
+        isActive = sc.nextBoolean();
+
+        // Output
+        System.out.println("\n--- Bank Account Details ---");
+        System.out.println("Account Number : " + accountNumber);
+        System.out.println("Account Holder : " + accountHolder);
+        System.out.println("Balance        : " + balance);
+        System.out.println("Account Type   : " + (accountType == 'S' ? "Savings" : "Current"));
+        System.out.println("Active Status  : " + isActive);
+    }
+}
